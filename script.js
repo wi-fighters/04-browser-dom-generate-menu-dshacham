@@ -32,7 +32,7 @@
 
         link.setAttribute('href', '#' + id); // TODO: get this programmatically
 
-        const linkText = document.createTextNode(id); // TODO: get this programmatically
+        const linkText = document.createTextNode(id.charAt(0).toLocaleUpperCase() + id.substring(1)); // TODO: get this programmatically
 
         // Prepend everything
         link.prepend(linkText);
