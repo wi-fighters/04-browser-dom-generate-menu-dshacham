@@ -63,13 +63,12 @@
     const sections = [...document.querySelectorAll('section')];
 
     const ids = sections.map(section => section.id);
-    console.dir(ids); // Why do I get a reversed array? ***
 
     const header = document.createElement('header');
 
     const ul = document.createElement('ul');
 
-    ids.reverse().forEach(id => {
+    ids.forEach(id => {
         const li = document.createElement('li');
 
         const link = document.createElement('a');
@@ -82,7 +81,7 @@
 
         li.prepend(link);
 
-        ul.prepend(li);
+        ul.appendChild(li);
     });
 
     header.prepend(ul);
